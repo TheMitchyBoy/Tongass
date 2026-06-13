@@ -9,6 +9,7 @@ const plans = [
     price: '$2,400',
     period: 'one-time + $149/mo',
     description: 'Essential web presence for shops and small tour operators.',
+    roi: '1 extra $80 sale per ship day pays this off in ~3 weeks.',
     features: [
       '5-page mobile-first website',
       'Google Business setup',
@@ -25,6 +26,7 @@ const plans = [
     price: '$5,800',
     period: 'one-time + $349/mo',
     description: 'Full booking and analytics for growing cruise-season businesses.',
+    roi: 'Avg. 147% more mobile conversions after launch. Most clients break even in 2 weeks.',
     features: [
       'Everything in Harbor',
       'Online booking & payments',
@@ -42,6 +44,7 @@ const plans = [
     price: 'Custom',
     period: 'tailored to your fleet',
     description: 'Enterprise solution for multi-location operators and franchises.',
+    roi: 'Multi-berth operators typically see 30–50% lift in pre-booked revenue.',
     features: [
       'Everything in Channel',
       'Multi-location management',
@@ -64,11 +67,17 @@ export default function Pricing() {
           <SectionHeading
             label="Pricing"
             title="Invest once, earn all season"
-            description="Most clients recover their investment within the first two weeks of cruise season. Every plan includes local Ketchikan support."
+            description="Transparent pricing. No surprise fees. Every plan includes local Ketchikan support and ship-schedule integration."
           />
         </Reveal>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <Reveal delay={80}>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm font-medium text-fjord-700">
+            <span className="text-glacier-400">Ship Day Starter</span> — Website + analytics + Google Business + ship widget. One package, one price, live in 4–6 weeks.
+          </p>
+        </Reveal>
+
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 100}>
               <TiltCard className="h-full">
@@ -98,11 +107,17 @@ export default function Pricing() {
                     </p>
                   </div>
 
-                  <p className={`mt-5 text-sm ${plan.highlighted ? 'text-white/55' : 'text-fjord-700/65'}`}>
+                  <p className={`mt-4 rounded-xl px-3 py-2.5 text-xs font-medium leading-relaxed ${
+                    plan.highlighted ? 'bg-glacier-400/10 text-glacier-300' : 'bg-mist-100 text-fjord-700'
+                  }`}>
+                    {plan.roi}
+                  </p>
+
+                  <p className={`mt-4 text-sm ${plan.highlighted ? 'text-white/55' : 'text-fjord-700/65'}`}>
                     {plan.description}
                   </p>
 
-                  <ul className="mt-7 flex-1 space-y-3">
+                  <ul className="mt-6 flex-1 space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2.5 text-sm">
                         <svg

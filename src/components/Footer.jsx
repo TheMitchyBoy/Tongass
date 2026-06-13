@@ -15,8 +15,8 @@ export default function Footer() {
               <span className="font-display text-xl font-bold text-white">Tongass Digital</span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/35">
-              Websites and analytics technology for Ketchikan businesses that serve cruise
-              ship passengers. Locally owned, locally operated.
+              2417 Tongass Ave, Ketchikan. Websites and ship-day analytics for cruise-season
+              businesses — locally owned, locally operated.
             </p>
           </Reveal>
 
@@ -35,8 +35,8 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-white">Company</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/35">
               {[
-                { label: 'Industries', href: '#industries' },
                 { label: 'Pricing', href: '#pricing' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Contact', href: '#contact' },
               ].map((item) => (
                 <li key={item.label}>

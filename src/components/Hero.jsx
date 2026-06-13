@@ -56,35 +56,35 @@ export default function Hero() {
               <div className="animate-fade-up mb-8 inline-flex items-center gap-2.5 rounded-full border border-glacier-400/20 bg-glacier-400/5 px-4 py-2 backdrop-blur-sm">
                 <span className="pulse-dot relative h-2 w-2 rounded-full bg-glacier-400" />
                 <span className="text-xs font-semibold uppercase tracking-[0.15em] text-glacier-300">
-                  Built for Ketchikan&apos;s cruise season
+                  Launch before the first ship docks · from $2,400
                 </span>
               </div>
 
               <h1 className="font-display text-[2.75rem] leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                Turn dock-day crowds into{' '}
-                <span className="text-gradient-animate">year-round revenue</span>
+                Fill your shop before passengers{' '}
+                <span className="text-gradient-animate">walk past your door</span>
               </h1>
 
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/55">
-                We build high-converting websites and passenger analytics for Ketchikan shops,
-                tours, galleries, and restaurants — so you capture every cruiser before they
-                sail away.
+                Mobile booking and ship-by-ship analytics for Ketchikan businesses.
+                Know which vessels make you money — and capture cruisers while they&apos;re
+                still on the tender.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button href="#contact" variant="primary">
-                  Get a Free Strategy Call
+                  Book Free Ship-Day Audit
                   <svg className="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Button>
-                <Button href="#services" variant="secondary">
-                  See What We Build
+                <Button href="#pricing" variant="secondary">
+                  See Pricing
                 </Button>
               </div>
 
               <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
-                {['Mobile-first for passengers on shore', 'Real-time cruise ship data', 'Local Ketchikan team'].map((item) => (
+                {['One $80 booking/day pays for itself in 3 weeks', 'Live in 4–6 weeks', 'Local Ketchikan team on Tongass Ave'].map((item) => (
                   <span key={item} className="flex items-center gap-2 text-sm text-white/40">
                     <svg className="h-4 w-4 text-glacier-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

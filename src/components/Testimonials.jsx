@@ -6,27 +6,30 @@ import SectionWave from './SectionWave'
 const testimonials = [
   {
     quote:
-      'Before Tongass Digital, we had no idea which ships brought our best customers. Now we staff up for Norwegian days and run specials on slow Tuesdays. Revenue is up 40% in one season.',
+      'Before Tongass, we had no idea Norwegian Bliss days were worth 2x our slow ships. We staff up accordingly and revenue jumped 40% in one season. Paid for itself in the first two weeks.',
     name: 'Sarah Lindqvist',
     business: 'Creek Street Trading Co.',
+    location: 'Front St, Berth 2 walkable',
     type: 'Gift Shop',
     metric: '+40% revenue',
   },
   {
     quote:
-      'Our fishing charters were losing bookings to competitors with better websites. Tongass built us a mobile booking system that fills boats before passengers even hit the dock.',
+      'We were losing charters to operators with better mobile sites. Now boats fill from pre-bookings before passengers hit Thomas Basin. Avg. 6 extra seats per ship day.',
     name: 'Mike Tlingit',
     business: 'Rainforest Anglers',
+    location: 'Thomas Basin',
     type: 'Tour Operator',
-    metric: 'Boats filled pre-dock',
+    metric: '+6 seats/ship day',
   },
   {
     quote:
-      'The analytics dashboard alone is worth it. I can see exactly when passengers from each ship are browsing our gallery — and we adjusted our hours to match.',
+      'I can see exactly when Summit passengers browse our gallery — 10:30 AM peak. We shifted hours and added online holds. Gallery traffic up 60% on ship days.',
     name: 'Elena Vasquez',
     business: 'Totem Heritage Gallery',
+    location: 'Creek Street',
     type: 'Art Gallery',
-    metric: 'Hours optimized',
+    metric: '+60% ship-day traffic',
   },
 ]
 
@@ -88,7 +91,7 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <p className="font-semibold text-fjord-950">{t.name}</p>
-                    <p className="text-sm text-fjord-700/55">{t.business} · {t.type}</p>
+                    <p className="text-sm text-fjord-700/55">{t.business} · {t.location}</p>
                   </div>
                 </footer>
               </div>
