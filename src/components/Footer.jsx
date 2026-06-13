@@ -23,9 +23,14 @@ export default function Footer() {
           <Reveal delay={80}>
             <h4 className="text-sm font-bold text-white">Services</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/35">
-              {['Website Design', 'Passenger Analytics', 'E-Commerce', 'Local SEO'].map((item) => (
-                <li key={item}>
-                  <a href="#services" className="transition hover:text-glacier-400">{item}</a>
+              {[
+                { label: 'Core Services', href: '#services' },
+                { label: 'Packages', href: '#packages' },
+                { label: 'Passenger Analytics', href: '#analytics' },
+                { label: 'Pricing', href: '#pricing' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="transition hover:text-glacier-400">{item.label}</a>
                 </li>
               ))}
             </ul>

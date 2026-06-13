@@ -27,6 +27,14 @@ const faqs = [
     q: 'Can passengers book on their phones before they leave the ship?',
     a: 'That\'s the core of what we build. Mobile-first sites that load on ship Wi-Fi, with pre-booking for tours, tables, and gifts — so you capture revenue during the tender ride to dock.',
   },
+  {
+    q: 'What\'s the Norwegian Day Package?',
+    a: 'It\'s for businesses that already have a site but want to maximize revenue from their biggest ship. We audit which vessel drives the most traffic, build a promo landing page, and give your staff a cheat sheet for that ship\'s peak hours.',
+  },
+  {
+    q: 'Do you offer ongoing support after launch?',
+    a: 'Yes. Season retainers include ship-day monitoring, SEO, analytics calls, and off-season email — all priced monthly and tied to your cruise calendar, not generic maintenance.',
+  },
 ]
 
 export default function FAQ() {
