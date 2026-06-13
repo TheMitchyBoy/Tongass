@@ -1,115 +1,97 @@
+import Reveal from './ui/Reveal'
+import SectionHeading from './ui/SectionHeading'
+import TiltCard from './ui/TiltCard'
+
 const services = [
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: '📱',
     title: 'Mobile-First Websites',
     description:
-      'Passengers search on their phones the moment they step off the gangway. We build fast, thumb-friendly sites that load on ship Wi-Fi and convert browsers into buyers.',
-    features: ['Sub-2s load times', 'Online booking integration', 'Multi-language support'],
+      'Passengers search on their phones the moment they step off the gangway. Fast, thumb-friendly sites that load on ship Wi-Fi.',
+    features: ['Sub-2s load times', 'Online booking', 'Multi-language'],
+    span: 'col-span-12 md:col-span-7',
+    accent: 'from-glacier-400/10 to-transparent',
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
+    icon: '📊',
     title: 'Passenger Analytics',
     description:
-      'Know which ships drive your best customers. Track foot traffic patterns, conversion rates by vessel, and peak shopping hours along Creek Street and the cruise docks.',
-    features: ['Ship-by-ship revenue tracking', 'Peak hour heatmaps', 'Season-over-season reports'],
+      'Know which ships drive your best customers. Track conversion rates by vessel and peak hours on Creek Street.',
+    features: ['Ship-by-ship tracking', 'Peak hour heatmaps', 'Season reports'],
+    span: 'col-span-12 md:col-span-5',
+    accent: 'from-aurora/10 to-transparent',
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    icon: '🛒',
     title: 'E-Commerce & Pre-Booking',
     description:
-      'Let passengers book tours, reserve tables, or pre-order gifts before they even leave the ship. Capture revenue during the 20-minute tender ride to Berth 3.',
-    features: ['Stripe & Square integration', 'Gift certificate sales', 'QR code ship marketing'],
+      'Let passengers book tours or pre-order gifts before they leave the ship. Capture revenue on the tender ride.',
+    features: ['Stripe & Square', 'Gift certificates', 'QR marketing'],
+    span: 'col-span-12 sm:col-span-6 md:col-span-4',
+    accent: 'from-salmon-400/10 to-transparent',
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-      </svg>
-    ),
+    icon: '📣',
     title: 'Local SEO & Discovery',
     description:
-      'Rank when passengers search "things to do Ketchikan" or "salmon fishing near cruise port." We optimize for the exact queries cruisers type at 7 AM.',
-    features: ['Google Business optimization', 'Cruise port map listings', 'Review management'],
+      'Rank when passengers search "things to do Ketchikan" at 7 AM. Optimized for cruise port queries.',
+    features: ['Google Business', 'Port map listings', 'Review management'],
+    span: 'col-span-12 sm:col-span-6 md:col-span-4',
+    accent: 'from-glacier-400/10 to-transparent',
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: '✉️',
     title: 'Email & Retargeting',
     description:
-      'Collect emails at checkout and follow up when their ship returns next season. Turn one-time visitors into repeat customers across multiple Alaska itineraries.',
-    features: ['Automated welcome sequences', 'Return-visitor campaigns', 'Seasonal promo calendars'],
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: 'Kiosk & In-Store Displays',
-    description:
-      'Digital menus, interactive product catalogs, and self-service booking screens for your Creek Street storefront. Reduce lines during peak ship hours.',
-    features: ['Touch-screen catalogs', 'Real-time inventory sync', 'Ship schedule displays'],
+      'Follow up when their ship returns next season. Turn one-time visitors into repeat customers.',
+    features: ['Welcome sequences', 'Return campaigns', 'Seasonal promos'],
+    span: 'col-span-12 sm:col-span-6 md:col-span-4',
+    accent: 'from-aurora/10 to-transparent',
   },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28">
+    <section id="services" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-fjord-600">
-            What We Build
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-fjord-900 md:text-4xl">
-            Everything a cruise-season business needs online
-          </h2>
-          <p className="mt-4 text-lg text-fjord-700/70">
-            From the moment a ship horn echoes across Tongass Narrows to the last tender
-            back at 4 PM — your digital presence works as hard as your front-line staff.
-          </p>
-        </div>
+        <Reveal>
+          <SectionHeading
+            label="What We Build"
+            title="Everything a cruise-season business needs online"
+            description="From the ship horn across Tongass Narrows to the last tender at 4 PM — your digital presence works as hard as your front-line staff."
+          />
+        </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <article
-              key={service.title}
-              className="section-card group rounded-2xl p-7 transition hover:border-glacier-400/30 hover:shadow-lg"
-            >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-fjord-900 text-glacier-400 transition group-hover:bg-glacier-400 group-hover:text-fjord-950">
-                {service.icon}
-              </div>
-              <h3 className="font-display text-xl font-semibold text-fjord-900">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-fjord-700/70">
-                {service.description}
-              </p>
-              <ul className="mt-5 space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-fjord-700">
-                    <svg className="h-4 w-4 shrink-0 text-glacier-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </article>
+        <div className="bento-grid mt-16">
+          {services.map((service, i) => (
+            <Reveal key={service.title} delay={i * 80} className={`bento-item ${service.span}`}>
+              <TiltCard className="h-full">
+                <article className="section-card group relative flex h-full flex-col rounded-2xl p-7 transition hover:-translate-y-1">
+                  <div
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.accent} opacity-0 transition group-hover:opacity-100`}
+                  />
+                  <div className="relative z-10">
+                    <span className="text-3xl" role="img" aria-hidden="true">{service.icon}</span>
+                    <h3 className="mt-5 font-display text-xl font-bold text-fjord-950">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-fjord-700/65">
+                      {service.description}
+                    </p>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {service.features.map((f) => (
+                        <span
+                          key={f}
+                          className="rounded-full bg-mist-100 px-3 py-1 text-xs font-medium text-fjord-700 ring-1 ring-mist-200 transition group-hover:bg-glacier-400/10 group-hover:ring-glacier-400/20"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              </TiltCard>
+            </Reveal>
           ))}
         </div>
       </div>

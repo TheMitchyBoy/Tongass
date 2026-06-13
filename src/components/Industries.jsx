@@ -1,79 +1,79 @@
+import { useRef, useState } from 'react'
+import Reveal from './ui/Reveal'
+import SectionHeading from './ui/SectionHeading'
+
 const industries = [
-  {
-    name: 'Gift & Souvenir Shops',
-    description: 'Showcase Alaska-made products with ship-friendly checkout and duty-free info.',
-    icon: '🎁',
-  },
-  {
-    name: 'Salmon & Wildlife Tours',
-    description: 'Fill every seat with pre-booking, real-time availability, and weather updates.',
-    icon: '🐟',
-  },
-  {
-    name: 'Native Art Galleries',
-    description: 'Tell authentic stories behind totems, carvings, and textiles that resonate with visitors.',
-    icon: '🎨',
-  },
-  {
-    name: 'Restaurants & Cafés',
-    description: 'Digital menus, waitlist management, and "near the port" SEO for hungry passengers.',
-    icon: '🍽️',
-  },
-  {
-    name: 'Adventure Excursions',
-    description: 'Zipline, kayak, and helicopter tours with instant booking and liability waivers online.',
-    icon: '🏔️',
-  },
-  {
-    name: 'Jewelry & Gem Stores',
-    description: 'High-resolution galleries, comparison tools, and ship-boarding delivery options.',
-    icon: '💎',
-  },
-  {
-    name: 'Breweries & Distilleries',
-    description: 'Tasting room schedules synced to ship arrivals. Sell bottles they can carry back onboard.',
-    icon: '🍺',
-  },
-  {
-    name: 'Transportation & Shuttles',
-    description: 'Route maps from Berth 1–4, real-time pickup scheduling, and group rate calculators.',
-    icon: '🚌',
-  },
+  { name: 'Gift & Souvenir Shops', description: 'Alaska-made products with ship-friendly checkout and duty-free info.', icon: '🎁' },
+  { name: 'Salmon & Wildlife Tours', description: 'Pre-booking, real-time availability, and weather updates.', icon: '🐟' },
+  { name: 'Native Art Galleries', description: 'Authentic stories behind totems, carvings, and textiles.', icon: '🎨' },
+  { name: 'Restaurants & Cafés', description: 'Digital menus, waitlists, and "near the port" SEO.', icon: '🍽️' },
+  { name: 'Adventure Excursions', description: 'Zipline, kayak, helicopter tours with instant online booking.', icon: '🏔️' },
+  { name: 'Jewelry & Gem Stores', description: 'High-res galleries and ship-boarding delivery options.', icon: '💎' },
+  { name: 'Breweries & Distilleries', description: 'Tasting schedules synced to ship arrivals.', icon: '🍺' },
+  { name: 'Transportation & Shuttles', description: 'Route maps from Berth 1–4 and group rate calculators.', icon: '🚌' },
 ]
 
 export default function Industries() {
-  return (
-    <section id="industries" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-fjord-600">
-            Who We Serve
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-fjord-900 md:text-4xl">
-            Built for every business the cruise ships bring to your door
-          </h2>
-          <p className="mt-4 text-lg text-fjord-700/70">
-            Whether you&apos;re on Front Street, Mission Street, or out by Ward Cove — if
-            cruise passengers are your customers, we know how to reach them.
-          </p>
-        </div>
+  const scrollRef = useRef(null)
+  const [active, setActive] = useState(0)
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {industries.map((industry) => (
-            <div
+  function scrollTo(index) {
+    setActive(index)
+    const container = scrollRef.current
+    if (!container) return
+    const card = container.children[index]
+    card?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }
+
+  return (
+    <section id="industries" className="py-24 md:py-32 dot-grid">
+      <div className="mx-auto max-w-6xl px-6">
+        <Reveal>
+          <SectionHeading
+            label="Who We Serve"
+            title="Built for every business cruise ships bring to your door"
+            description="Front Street, Mission Street, or Ward Cove — if cruise passengers are your customers, we know how to reach them."
+          />
+        </Reveal>
+
+        <Reveal delay={150}>
+          <div className="mt-10 flex flex-wrap justify-center gap-2">
+            {industries.map((ind, i) => (
+              <button
+                key={ind.name}
+                type="button"
+                onClick={() => scrollTo(i)}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                  active === i
+                    ? 'bg-fjord-950 text-white shadow-lg shadow-fjord-950/20'
+                    : 'bg-white text-fjord-700 ring-1 ring-mist-200 hover:ring-glacier-400/30'
+                }`}
+              >
+                {ind.icon} {ind.name.split(' ')[0]}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+
+        <div ref={scrollRef} className="industry-scroll mt-10 pb-4">
+          {industries.map((industry, i) => (
+            <article
               key={industry.name}
-              className="section-card rounded-2xl p-6 transition hover:border-fjord-600/20 hover:shadow-md"
+              className={`industry-card section-card cursor-pointer rounded-2xl p-6 ${
+                active === i ? 'active ring-2 ring-glacier-400/40' : ''
+              }`}
+              onClick={() => setActive(i)}
             >
-              <span className="text-3xl" role="img" aria-hidden="true">
-                {industry.icon}
-              </span>
-              <h3 className="mt-4 font-display text-lg font-semibold text-fjord-900">
-                {industry.name}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-fjord-700/70">
-                {industry.description}
-              </p>
-            </div>
+              <span className="text-4xl" role="img" aria-hidden="true">{industry.icon}</span>
+              <h3 className="mt-5 font-display text-lg font-bold text-fjord-950">{industry.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-fjord-700/65">{industry.description}</p>
+              <div className="mt-5 flex items-center gap-1 text-xs font-semibold text-glacier-400 opacity-0 transition group-hover:opacity-100">
+                Learn more
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </article>
           ))}
         </div>
       </div>

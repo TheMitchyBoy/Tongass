@@ -1,4 +1,6 @@
 import Header from './components/Header'
+import ScrollProgress from './components/ScrollProgress'
+import CursorGlow from './components/CursorGlow'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import Services from './components/Services'
@@ -13,6 +15,8 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
+      <CursorGlow />
       <Header />
       <main>
         <Hero />
