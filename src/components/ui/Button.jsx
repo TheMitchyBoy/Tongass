@@ -10,7 +10,7 @@ export default function Button({
     'btn-shine group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300'
 
   const variants = {
-    primary: 'bg-glacier-400 text-fjord-950 hover:scale-[1.03] hover:shadow-lg hover:shadow-glacier-400/25',
+    primary: 'bg-glacier-400 text-fjord-950 hover:scale-[1.03] hover:shadow-lg hover:shadow-fjord-900/20',
     secondary:
       'border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:border-white/40 hover:bg-white/10',
     dark: 'bg-fjord-950 text-white hover:bg-fjord-800 hover:scale-[1.02]',

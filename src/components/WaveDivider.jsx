@@ -1,8 +1,8 @@
 const fills = {
-  white: '#f7fcfd',
-  mist: '#eef8fa',
-  fjord: '#020f14',
-  deep: '#0a2e38',
+  white: '#f5f9fd',
+  mist: '#e8f0f8',
+  fjord: '#041525',
+  deep: '#0a2342',
 }
 
 export default function WaveDivider({

@@ -11,11 +11,11 @@ export default function HeroWaves() {
       >
         <path
           d="M0,80 C320,140 480,30 720,80 C960,130 1120,40 1440,80 L1440,160 L0,160 Z"
-          fill="rgba(45, 212, 191, 0.08)"
+          fill="rgba(91, 155, 213, 0.12)"
         />
         <path
           d="M0,80 C320,140 480,30 720,80 C960,130 1120,40 1440,80 L1440,160 L0,160 Z"
-          fill="rgba(45, 212, 191, 0.08)"
+          fill="rgba(91, 155, 213, 0.12)"
           transform="translate(1440, 0)"
         />
       </svg>
@@ -28,11 +28,11 @@ export default function HeroWaves() {
       >
         <path
           d="M0,90 C200,50 400,120 600,90 C800,60 1000,120 1200,90 C1320,70 1380,100 1440,90 L1440,160 L0,160 Z"
-          fill="rgba(94, 234, 212, 0.12)"
+          fill="rgba(139, 184, 232, 0.18)"
         />
         <path
           d="M0,90 C200,50 400,120 600,90 C800,60 1000,120 1200,90 C1320,70 1380,100 1440,90 L1440,160 L0,160 Z"
-          fill="rgba(94, 234, 212, 0.12)"
+          fill="rgba(139, 184, 232, 0.18)"
           transform="translate(1440, 0)"
         />
       </svg>
@@ -45,11 +45,11 @@ export default function HeroWaves() {
       >
         <path
           d="M0,100 C240,60 480,130 720,100 C960,70 1200,130 1440,100 L1440,160 L0,160 Z"
-          fill="#f7fcfd"
+          fill="#f5f9fd"
         />
         <path
           d="M0,100 C240,60 480,130 720,100 C960,70 1200,130 1440,100 L1440,160 L0,160 Z"
-          fill="#f7fcfd"
+          fill="#f5f9fd"
           transform="translate(1440, 0)"
         />
       </svg>
