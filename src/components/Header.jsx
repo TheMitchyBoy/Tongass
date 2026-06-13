@@ -14,15 +14,18 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
+    const onScroll = () => setScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <header
-      className={`fixed top-0.5 left-0 right-0 z-50 border-b border-white/5 bg-fjord-950/60 backdrop-blur-xl transition-all duration-500 ${
-        scrolled ? 'header-scrolled' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'header-scrolled border-b border-white/10 bg-fjord-950/90 shadow-lg shadow-fjord-950/20 backdrop-blur-xl'
+          : 'border-b border-transparent bg-gradient-to-b from-fjord-950/80 via-fjord-950/40 to-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -47,7 +50,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="nav-link relative rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition hover:text-white"
+              className="nav-link relative rounded-lg px-4 py-2 text-sm font-medium text-white/70 transition hover:bg-white/5 hover:text-white"
             >
               {link.label}
             </a>
@@ -90,11 +93,7 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <Button
-              href="#contact"
-              variant="primary"
-              className="mt-3 w-full"
-            >
+            <Button href="#contact" variant="primary" className="mt-3 w-full">
               Free Consultation
             </Button>
           </div>

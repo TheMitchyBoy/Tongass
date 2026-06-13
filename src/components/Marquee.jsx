@@ -13,7 +13,7 @@ export default function Marquee() {
   const items = [...ships, ...ships]
 
   return (
-    <div className="marquee-mask border-y border-white/10 bg-black/20 py-3 backdrop-blur-sm">
+    <div className="marquee-mask border-b border-white/10 bg-white/5 py-3 backdrop-blur-sm">
       <div className="marquee-track">
         {items.map((ship, i) => (
           <span key={`${ship}-${i}`} className="marquee-item">

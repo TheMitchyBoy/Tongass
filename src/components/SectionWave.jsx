@@ -1,6 +1,7 @@
 const fills = {
   white: '#f5f9fd',
   mist: '#e8f0f8',
+  shallow: '#1a4785',
   deep: '#0a2342',
   fjord: '#041525',
 }

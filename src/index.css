@@ -464,12 +464,6 @@ body {
   box-shadow: 0 0 0 4px rgba(91, 155, 213, 0.15);
 }
 
-/* ── Header scrolled ── */
-.header-scrolled {
-  background: rgba(4, 21, 37, 0.88) !important;
-  border-color: rgba(255, 255, 255, 0.06) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
 
 /* ── Noise overlay ── */
 .noise-overlay::after {
@@ -519,51 +513,6 @@ body {
 @keyframes shimmer-drift {
   0% { transform: translateX(0); }
   100% { transform: translateX(80px); }
-}
-
-/* ── Hero waves ── */
-.hero-waves {
-  height: 180px;
-}
-
-.water-rays {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  width: 120%;
-  height: 300px;
-  transform: translateX(-50%);
-  background: conic-gradient(
-    from 180deg at 50% 100%,
-    transparent 0deg,
-    rgba(91, 155, 213, 0.05) 20deg,
-    transparent 40deg,
-    rgba(139, 184, 232, 0.04) 60deg,
-    transparent 80deg,
-    rgba(91, 155, 213, 0.06) 100deg,
-    transparent 120deg,
-    rgba(139, 184, 232, 0.04) 140deg,
-    transparent 160deg
-  );
-  animation: rays-sway 10s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-@keyframes rays-sway {
-  0% { transform: translateX(-50%) rotate(-2deg); opacity: 0.7; }
-  100% { transform: translateX(-48%) rotate(2deg); opacity: 1; }
-}
-
-.hero-wave-layer-1 {
-  animation: wave-scroll 22s linear infinite;
-}
-
-.hero-wave-layer-2 {
-  animation: wave-scroll 16s linear infinite reverse;
-}
-
-.hero-wave-layer-3 {
-  animation: wave-scroll 28s linear infinite;
 }
 
 /* ── Section waves (integrated at section edges) ── */
@@ -640,9 +589,6 @@ body {
     animation: none;
   }
 
-  .hero-wave-layer-1,
-  .hero-wave-layer-2,
-  .hero-wave-layer-3,
   .wave-drift-slow,
   .wave-drift-fast {
     animation: none;
@@ -650,8 +596,7 @@ body {
 
   .water-caustics,
   .water-surface-shimmer,
-  .hero-bubbles,
-  .water-rays {
+  .hero-bubbles {
     animation: none;
   }
 }
