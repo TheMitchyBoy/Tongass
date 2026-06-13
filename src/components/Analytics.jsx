@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
+import SectionWave from './SectionWave'
 import TiltCard from './ui/TiltCard'
 
 const tabs = ['Overview', 'Ships', 'Revenue']
@@ -50,12 +51,12 @@ export default function Analytics() {
   const [hoveredBar, setHoveredBar] = useState(null)
 
   return (
-    <section id="analytics" className="section-deep relative overflow-hidden py-24 md:py-32 underwater-section">
+    <section id="analytics" className="relative overflow-hidden pb-0 pt-24 underwater-section md:pt-32">
       <div className="hero-mesh">
         <div className="mesh-orb mesh-orb-2 !opacity-30" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-6 pb-24 md:pb-32">
         <div className="grid items-start gap-14 lg:grid-cols-2">
           <div>
             <Reveal>
@@ -164,6 +165,7 @@ export default function Analytics() {
           </Reveal>
         </div>
       </div>
+      <SectionWave from="deep" to="white" />
     </section>
   )
 }

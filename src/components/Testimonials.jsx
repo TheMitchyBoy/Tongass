@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
+import SectionWave from './SectionWave'
 
 const testimonials = [
   {
@@ -49,8 +50,8 @@ export default function Testimonials() {
   const t = testimonials[current]
 
   return (
-    <section className="section-light py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-mist-50 pb-0 pt-24 md:pt-32">
+      <div className="mx-auto max-w-6xl px-6 pb-24 md:pb-32">
         <Reveal>
           <SectionHeading
             label="Local Results"
@@ -138,6 +139,7 @@ export default function Testimonials() {
           to { opacity: 1; transform: translateX(0); }
         }
       `}</style>
+      <SectionWave from="white" to="fjord" />
     </section>
   )
 }

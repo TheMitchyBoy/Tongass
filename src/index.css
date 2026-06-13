@@ -523,19 +523,7 @@ body {
 
 /* ── Hero waves ── */
 .hero-waves {
-  height: 220px;
-}
-
-.hero-wave-veil {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(245, 249, 253, 0.4) 70%,
-    #f5f9fd 100%
-  );
-  pointer-events: none;
+  height: 180px;
 }
 
 .water-rays {
@@ -578,26 +566,10 @@ body {
   animation: wave-scroll 28s linear infinite;
 }
 
-/* ── Section wave dividers ── */
-.wave-divider {
+/* ── Section waves (integrated at section edges) ── */
+.section-wave {
   display: block;
   line-height: 0;
-  position: relative;
-  z-index: 2;
-  margin-top: -1px;
-  margin-bottom: -1px;
-}
-
-.wave-divider-foam {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.06) 50%,
-    rgba(255, 255, 255, 0.14) 100%
-  );
-  pointer-events: none;
 }
 
 .wave-drift-slow {
@@ -617,51 +589,12 @@ body {
   transform: scaleY(-1);
 }
 
-/* ── Section backgrounds ── */
-.section-light {
-  background-color: var(--color-mist-50);
-  position: relative;
-}
-
-.section-deep {
-  position: relative;
-}
-
-/* ── Water surface sections ── */
-.water-surface {
-  position: relative;
-}
-
-.water-surface::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(91, 155, 213, 0.2),
-    rgba(139, 184, 232, 0.35),
-    rgba(91, 155, 213, 0.2),
-    transparent
-  );
-  animation: surface-glint 4s ease-in-out infinite;
-}
-
-@keyframes surface-glint {
-  0%, 100% { opacity: 0.4; transform: scaleX(0.8); }
-  50% { opacity: 1; transform: scaleX(1); }
-}
-
 /* ── Underwater deep sections ── */
 .underwater-section {
   background: linear-gradient(
     180deg,
     #0a2342 0%,
-    #0a2342 8%,
-    #041525 45%,
+    #041525 50%,
     #020c18 100%
   );
 }
@@ -677,17 +610,7 @@ body {
   pointer-events: none;
 }
 
-#contact.section-deep {
-  background: linear-gradient(
-    180deg,
-    #041525 0%,
-    #041525 8%,
-    #020c18 100%
-  );
-}
-
-.underwater-section::after,
-#contact.section-deep::after {
+.underwater-section::after {
   content: '';
   position: absolute;
   inset: 0;

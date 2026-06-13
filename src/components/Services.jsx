@@ -1,5 +1,6 @@
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
+import SectionWave from './SectionWave'
 import TiltCard from './ui/TiltCard'
 
 const services = [
@@ -52,12 +53,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section-light relative py-24 md:py-32">
+    <section id="services" className="relative bg-mist-50 pt-24 pb-0 md:pt-32">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -right-20 top-20 h-64 w-64 rounded-full bg-glacier-400/5 blur-3xl" />
         <div className="absolute -left-10 bottom-10 h-48 w-48 rounded-full bg-fjord-600/5 blur-3xl" />
       </div>
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-6 pb-24 md:pb-32">
         <Reveal>
           <SectionHeading
             label="What We Build"
@@ -99,6 +100,7 @@ export default function Services() {
           ))}
         </div>
       </div>
+      <SectionWave from="white" to="deep" />
     </section>
   )
 }

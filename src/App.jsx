@@ -3,7 +3,6 @@ import ScrollProgress from './components/ScrollProgress'
 import CursorGlow from './components/CursorGlow'
 import WaterAmbience from './components/WaterAmbience'
 import Hero from './components/Hero'
-import WaveDivider from './components/WaveDivider'
 import Stats from './components/Stats'
 import Services from './components/Services'
 import Analytics from './components/Analytics'
@@ -25,14 +24,11 @@ export default function App() {
         <Hero />
         <Stats />
         <Services />
-        <WaveDivider from="white" to="deep" height={140} />
         <Analytics />
-        <WaveDivider from="deep" to="mist" height={140} />
         <Industries />
         <Process />
         <Pricing />
         <Testimonials />
-        <WaveDivider from="mist" to="fjord" height={140} />
         <Contact />
       </main>
       <Footer />

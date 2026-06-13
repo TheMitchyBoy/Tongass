@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-deep relative overflow-hidden py-24 md:py-32">
+    <section id="contact" className="relative overflow-hidden bg-fjord-950 py-24 md:py-32">
       <div className="hero-mesh">
         <div className="mesh-orb mesh-orb-3 !opacity-25" />
       </div>
