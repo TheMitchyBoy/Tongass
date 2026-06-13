@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Syne", system-ui, sans-serif;
-  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Marcellus", "Times New Roman", serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
 
   --color-fjord-950: #020f14;
   --color-fjord-900: #0a2e38;
@@ -33,6 +33,7 @@ body {
 
 .font-display {
   font-family: var(--font-display);
+  letter-spacing: 0.02em;
 }
 
 ::selection {
