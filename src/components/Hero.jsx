@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Button from './ui/Button'
 import Marquee from './Marquee'
+import HeroWaves from './HeroWaves'
 import TiltCard from './ui/TiltCard'
 
 const ships = [
@@ -37,18 +38,19 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="hero-gradient noise-overlay relative overflow-hidden">
+    <section className="hero-gradient hero-underwater noise-overlay relative overflow-hidden">
       <div className="hero-mesh">
         <div className="mesh-orb mesh-orb-1" />
         <div className="mesh-orb mesh-orb-2" />
         <div className="mesh-orb mesh-orb-3" />
         <div className="hero-grid" />
+        <div className="hero-bubbles" />
       </div>
 
       <div className="relative pt-24 md:pt-28">
         <Marquee />
 
-        <div className="mx-auto max-w-6xl px-6 pb-20 pt-12 md:pb-28 md:pt-16">
+        <div className="mx-auto max-w-6xl px-6 pb-36 pt-12 md:pb-44 md:pt-16">
           <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
             <div>
               <div className="animate-fade-up mb-8 inline-flex items-center gap-2.5 rounded-full border border-glacier-400/20 bg-glacier-400/5 px-4 py-2 backdrop-blur-sm">
@@ -146,6 +148,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <HeroWaves />
     </section>
   )
 }
