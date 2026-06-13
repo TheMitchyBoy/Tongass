@@ -50,7 +50,7 @@ export default function Analytics() {
   const [hoveredBar, setHoveredBar] = useState(null)
 
   return (
-    <section id="analytics" className="relative overflow-hidden bg-fjord-950 py-24 md:py-32 underwater-section">
+    <section id="analytics" className="section-deep relative overflow-hidden py-24 md:py-32 underwater-section">
       <div className="hero-mesh">
         <div className="mesh-orb mesh-orb-2 !opacity-30" />
       </div>

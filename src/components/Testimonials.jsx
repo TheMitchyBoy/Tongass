@@ -49,7 +49,7 @@ export default function Testimonials() {
   const t = testimonials[current]
 
   return (
-    <section className="border-t border-mist-200 bg-mist-50 py-24 md:py-32">
+    <section className="section-light py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <SectionHeading

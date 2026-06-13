@@ -52,7 +52,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32">
+    <section id="services" className="section-light relative py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -right-20 top-20 h-64 w-64 rounded-full bg-glacier-400/5 blur-3xl" />
         <div className="absolute -left-10 bottom-10 h-48 w-48 rounded-full bg-fjord-600/5 blur-3xl" />

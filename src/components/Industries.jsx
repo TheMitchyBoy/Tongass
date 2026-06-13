@@ -26,7 +26,7 @@ export default function Industries() {
   }
 
   return (
-    <section id="industries" className="py-24 md:py-32 dot-grid">
+    <section id="industries" className="section-light py-24 md:py-32 dot-grid">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <SectionHeading

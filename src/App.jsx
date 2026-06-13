@@ -25,16 +25,14 @@ export default function App() {
         <Hero />
         <Stats />
         <Services />
-        <WaveDivider top="white" bottom="deep" height={72} />
+        <WaveDivider from="white" to="deep" height={140} />
         <Analytics />
-        <WaveDivider top="fjord" bottom="mist" height={72} />
+        <WaveDivider from="deep" to="mist" height={140} />
         <Industries />
-        <WaveDivider top="mist" bottom="white" height={56} />
         <Process />
         <Pricing />
-        <WaveDivider top="white" bottom="mist" height={56} />
         <Testimonials />
-        <WaveDivider top="mist" bottom="fjord" height={72} />
+        <WaveDivider from="mist" to="fjord" height={140} />
         <Contact />
       </main>
       <Footer />

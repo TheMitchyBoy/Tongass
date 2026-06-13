@@ -39,7 +39,7 @@ export default function Process() {
   const [active, setActive] = useState(0)
 
   return (
-    <section className="border-y border-mist-200 bg-white py-24 md:py-32">
+    <section className="section-light py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <SectionHeading
