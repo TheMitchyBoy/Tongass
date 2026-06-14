@@ -3,7 +3,7 @@ const VISITOR_KEY = 'ketchikancode_visitor_id'
 const SESSION_KEY = 'ketchikancode_session_id'
 
 const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID
-const CLARITY_ID = import.meta.env.VITE_CLARITY_PROJECT_ID
+const CLARITY_ID = import.meta.env.VITE_CLARITY_PROJECT_ID || 'x71136z8w9'
 const ENDPOINT = import.meta.env.VITE_TRACKING_ENDPOINT
 
 let initialized = false
@@ -125,18 +125,21 @@ function initGA4() {
 }
 
 function initClarity() {
-  if (!CLARITY_ID || window.clarity) return
+  if (!CLARITY_ID) return
+  if (document.querySelector(`script[src*="clarity.ms/tag/${CLARITY_ID}"]`)) return
 
-  window.clarity =
-    window.clarity ||
-    function clarityFn() {
-      ;(window.clarity.q = window.clarity.q || []).push(arguments)
-    }
-
-  const script = document.createElement('script')
-  script.async = true
-  script.src = `https://www.clarity.ms/tag/${CLARITY_ID}`
-  document.head.appendChild(script)
+  ;(function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        ;(c[a].q = c[a].q || []).push(arguments)
+      }
+    t = l.createElement(r)
+    t.async = 1
+    t.src = 'https://www.clarity.ms/tag/' + i
+    y = l.getElementsByTagName(r)[0]
+    y.parentNode.insertBefore(t, y)
+  })(window, document, 'clarity', 'script', CLARITY_ID)
 }
 
 export function hasConsent() {
