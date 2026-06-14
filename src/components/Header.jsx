@@ -3,7 +3,8 @@ import Button from './ui/Button'
 
 const navLinks = [
   { href: '#services', label: 'Services' },
-  { href: '#analytics', label: 'Analytics' },
+  { href: '#code', label: 'Code' },
+  { href: '#automation', label: 'Automation' },
   { href: '#pricing', label: 'Pricing' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
@@ -40,7 +41,7 @@ export default function Header() {
               Tongass Digital
             </span>
             <span className="block text-[10px] font-medium uppercase tracking-[0.25em] text-glacier-400/70">
-              Ketchikan, Alaska
+              Coding Services · Ketchikan
             </span>
           </div>
         </a>
@@ -68,7 +69,7 @@ export default function Header() {
             (907) 555-0147
           </a>
           <Button href="#contact" variant="primary" className="!px-4 !py-2.5 !text-sm lg:!px-5">
-            Free Audit
+            Start a Project
           </Button>
           <button
             type="button"
@@ -112,7 +113,7 @@ export default function Header() {
               (907) 555-0147
             </a>
             <Button href="#contact" variant="primary" className="mt-3 w-full">
-              Free Ship-Day Audit
+              Start a Project
             </Button>
           </div>
         </nav>

@@ -4,33 +4,33 @@ import SectionHeading from './ui/SectionHeading'
 import Button from './ui/Button'
 import TiltCard from './ui/TiltCard'
 
-const businessTypes = [
-  'Gift & Souvenir Shop',
-  'Tour Operator',
-  'Restaurant / Café',
-  'Art Gallery',
-  'Adventure Excursion',
-  'Jewelry Store',
+const projectTypes = [
+  'Website / Web App',
+  'API Integration',
+  'Workflow Automation',
+  'Machine Learning',
+  'Data Pipeline',
+  'Legacy Modernization',
   'Other',
 ]
 
-const seasonMonths = [
-  'May 2026',
-  'April 2026 — need to launch ASAP',
-  'Already open / mid-season',
-  'Planning for 2027',
+const timelines = [
+  'ASAP — need it before season',
+  '4–6 weeks',
+  '2–3 months',
+  'Exploring options',
 ]
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [focused, setFocused] = useState(null)
-  const [businessType, setBusinessType] = useState('')
+  const [projectType, setProjectType] = useState('')
 
   useEffect(() => {
-    const stored = sessionStorage.getItem('businessType')
-    if (stored && businessTypes.includes(stored)) {
-      setBusinessType(stored)
-      sessionStorage.removeItem('businessType')
+    const stored = sessionStorage.getItem('projectType')
+    if (stored && projectTypes.includes(stored)) {
+      setProjectType(stored)
+      sessionStorage.removeItem('projectType')
     }
   }, [])
 
@@ -51,8 +51,8 @@ export default function Contact() {
             <Reveal>
               <SectionHeading
                 label="Get Started"
-                title="Free 15-minute ship-day audit"
-                description="We'll tell you which ships matter to your business, what's broken on mobile, and whether you can launch before your next busy day. No pitch deck — just answers."
+                title="Free technical consultation"
+                description="Tell us what systems you're running and what manual work you want to eliminate. We'll map a build plan with scope, timeline, and tech stack. No sales pitch."
                 light
                 align="left"
               />
@@ -100,13 +100,13 @@ export default function Contact() {
                     </div>
                     <h3 className="mt-6 font-display text-2xl font-bold text-fjord-950">Mahsie&apos;!</h3>
                     <p className="mt-2 text-sm text-fjord-700/65">
-                      We&apos;ll call you within one business day to schedule your ship-day audit.
+                      We&apos;ll reach out within one business day to schedule your technical consult.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <h3 className="font-display text-xl font-bold text-fjord-950">
-                      Book Your Free Audit
+                      Start a Project
                     </h3>
                     <p className="text-sm text-fjord-700/65">3 fields. Under 60 seconds.</p>
 
@@ -115,33 +115,33 @@ export default function Contact() {
                     <Field label="Phone" id="phone" type="tel" required focused={focused} setFocused={setFocused} placeholder="(907) 555-0100" />
 
                     <div>
-                      <label htmlFor="type" className="mb-1.5 block text-sm font-medium text-fjord-900">Business Type</label>
+                      <label htmlFor="type" className="mb-1.5 block text-sm font-medium text-fjord-900">Project Type</label>
                       <select
                         id="type"
                         required
-                        value={businessType}
-                        onChange={(e) => setBusinessType(e.target.value)}
+                        value={projectType}
+                        onChange={(e) => setProjectType(e.target.value)}
                         className="input-modern"
                       >
-                        <option value="">Select your industry</option>
-                        {businessTypes.map((type) => (
+                        <option value="">What do you need built?</option>
+                        {projectTypes.map((type) => (
                           <option key={type} value={type}>{type}</option>
                         ))}
                       </select>
                     </div>
 
                     <div>
-                      <label htmlFor="season" className="mb-1.5 block text-sm font-medium text-fjord-900">When do you need to be live?</label>
-                      <select id="season" required className="input-modern">
-                        <option value="">Select a timeframe</option>
-                        {seasonMonths.map((m) => (
-                          <option key={m} value={m}>{m}</option>
+                      <label htmlFor="timeline" className="mb-1.5 block text-sm font-medium text-fjord-900">Timeline</label>
+                      <select id="timeline" required className="input-modern">
+                        <option value="">When do you need it?</option>
+                        {timelines.map((t) => (
+                          <option key={t} value={t}>{t}</option>
                         ))}
                       </select>
                     </div>
 
                     <Button type="submit" variant="dark" className="w-full">
-                      Book My Free Ship-Day Audit
+                      Request Technical Consult
                     </Button>
 
                     <p className="text-center text-xs text-fjord-700/50">

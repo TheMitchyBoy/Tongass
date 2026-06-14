@@ -1,88 +1,87 @@
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
-import SectionWave from './SectionWave'
 import TiltCard from './ui/TiltCard'
 import Button from './ui/Button'
 
 const coreServices = [
   {
-    icon: '📱',
-    title: 'Mobile-First Websites',
+    icon: '💻',
+    title: 'Custom Website Development',
     description:
-      'Passengers search on their phones the moment they step off the gangway. Fast, thumb-friendly sites that load on ship Wi-Fi.',
-    features: ['Sub-2s load times', 'Multi-language', 'Off-season modes'],
+      'Hand-coded React sites and web apps — fast on mobile, built for ship Wi-Fi, with real booking and inventory logic under the hood.',
+    features: ['React & TypeScript', 'Headless CMS', 'Mobile-first performance'],
     span: 'col-span-12 md:col-span-7',
     accent: 'from-glacier-400/10 to-transparent',
   },
   {
-    icon: '📊',
-    title: 'Passenger Analytics',
+    icon: '🔗',
+    title: 'Cross-Platform Integration',
     description:
-      'Revenue per ship, peak hours, and slow-day alerts. Staff smarter and run promos when tenders are light.',
-    features: ['Ship-by-ship revenue', 'Peak hour heatmaps', 'YoY ship comparisons'],
+      'Connect Square, Stripe, FareHarbor, Clover, QuickBooks, HubSpot, and custom APIs so data flows without manual entry.',
+    features: ['REST & GraphQL APIs', 'Webhook handlers', 'Two-way sync'],
     span: 'col-span-12 md:col-span-5',
     accent: 'from-aurora/10 to-transparent',
   },
   {
-    icon: '🛒',
-    title: 'Pre-Tender Booking',
+    icon: '⚙️',
+    title: 'Workflow Automation',
     description:
-      'Capture tours, tables, and tastings while passengers are still on the ship. QR codes on gangway flyers and partner hotels.',
-    features: ['Stripe & Square', 'Reserve now, pay at dock', 'QR ship marketing'],
+      'Scheduled jobs, alert pipelines, and data transforms that replace spreadsheets — ship schedules to Slack, inventory to booking systems.',
+    features: ['Python scripts', 'Cron & event triggers', 'Slack/email alerts'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-salmon-400/10 to-transparent',
   },
   {
-    icon: '📣',
-    title: 'Port SEO & Google Business',
+    icon: '🧠',
+    title: 'Machine Learning',
     description:
-      'Rank for "things to do Ketchikan cruise port" and "food near berth 3." Photo updates on empty ship days.',
-    features: ['Google Business', 'Port map listings', 'Review responses'],
+      'Demand forecasting, staffing models, and anomaly detection trained on your historical data — not generic dashboards.',
+    features: ['Demand prediction', 'Staffing optimization', 'Anomaly alerts'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-glacier-400/10 to-transparent',
   },
   {
-    icon: '✉️',
-    title: 'Return-Visitor Email',
+    icon: '📡',
+    title: 'API Development',
     description:
-      'Capture emails at checkout. Auto-send when their ship returns next season — "Your ship docks in 14 days."',
-    features: ['Welcome sequences', 'Return-ship campaigns', 'Review requests'],
+      'Custom backends and microservices that power booking widgets, kiosks, partner portals, and mobile apps.',
+    features: ['FastAPI / Node.js', 'Auth & rate limiting', 'OpenAPI docs'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-aurora/10 to-transparent',
   },
   {
-    icon: '🔗',
-    title: 'POS & Inventory Sync',
+    icon: '🗄️',
+    title: 'Data Pipelines',
     description:
-      'Square, Clover, and FareHarbor integration so online availability matches what\'s actually in stock.',
-    features: ['Real-time availability', '"3 spots left" badges', 'Booking system sync'],
+      'ETL from POS, booking, and CRM systems into a single warehouse for reporting, ML training, and business intelligence.',
+    features: ['PostgreSQL / BigQuery', 'Scheduled ETL', 'Custom dashboards'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-glacier-400/10 to-transparent',
   },
   {
-    icon: '🖥️',
-    title: 'In-Store & Kiosk Displays',
+    icon: '📱',
+    title: 'Booking & Kiosk Apps',
     description:
-      'Digital menus, queue screens, and self-service booking at your storefront. "Next ship in 42 min" for staff and customers.',
-    features: ['Touch-screen catalogs', 'Ship schedule displays', 'Waitlist kiosks'],
+      'Touch-screen kiosks, self-service booking flows, and real-time availability components wired to your live inventory.',
+    features: ['React frontends', 'Live inventory', 'Offline fallback'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-aurora/10 to-transparent',
   },
   {
-    icon: '🎨',
-    title: 'Gallery & Story Pages',
+    icon: '🔧',
+    title: 'Legacy System Modernization',
     description:
-      'Artist bios, cultural context, and authenticity storytelling for Native art galleries and Alaska-made retail.',
-    features: ['Artist profiles', 'High-res mobile galleries', 'Duty-free info'],
+      'Replace paper logs and Excel workflows with proper software — migrate data, build APIs, and train your team.',
+    features: ['Data migration', 'API wrappers', 'Staff training'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-salmon-400/10 to-transparent',
   },
   {
-    icon: '🚢',
-    title: 'Ship-Day On-Site Support',
+    icon: '🛠️',
+    title: 'Ongoing Dev Support',
     description:
-      'We\'re on Front Street for your first major ship days after launch — tuning, troubleshooting, and training in real time.',
-    features: ['Launch-week presence', 'Staff cheat sheets', 'Live dashboard coaching'],
+      'Bug fixes, feature additions, dependency updates, and monitoring — your codebase stays healthy season to season.',
+    features: ['GitHub repos you own', 'CI/CD pipelines', 'On-call support'],
     span: 'col-span-12 sm:col-span-6 md:col-span-4',
     accent: 'from-glacier-400/10 to-transparent',
   },
@@ -90,67 +89,67 @@ const coreServices = [
 
 const packages = [
   {
-    name: 'Ship Day Starter',
-    price: 'From $2,400',
-    description: 'Website + analytics + Google Business + ship schedule widget. Live in 4–6 weeks.',
-    includes: ['5-page mobile site', 'Basic analytics', 'GBP setup', 'Ship widget'],
+    name: 'Integration Sprint',
+    price: 'From $3,200',
+    description: 'Connect two platforms in 2–3 weeks. Square ↔ FareHarbor, POS ↔ CRM, or booking ↔ inventory.',
+    includes: ['API audit', 'Two-way sync', 'Error monitoring', 'Documentation'],
     popular: false,
   },
   {
-    name: 'Norwegian Day Package',
-    price: 'From $1,200',
-    description: 'Audit + promo landing page + staff cheat sheet for your biggest revenue ship.',
-    includes: ['Ship revenue audit', 'Promo landing page', 'Staff ship-day guide', 'Peak hour report'],
+    name: 'Automation Build',
+    price: 'From $2,800',
+    description: 'Replace a manual workflow with a Python automation — alerts, reports, data transforms, scheduled jobs.',
+    includes: ['Workflow mapping', 'Script development', 'Slack/email hooks', 'Runbook docs'],
     popular: true,
   },
   {
-    name: 'Pre-Season Blitz',
-    price: 'From $6,800',
-    description: '4-week sprint before first May docking. Site, booking, analytics, and team training.',
-    includes: ['Full site launch', 'Booking integration', 'Analytics Pro', '3 training sessions'],
+    name: 'Full Stack Launch',
+    price: 'From $8,500',
+    description: 'Custom website + integrations + automation in a 6–8 week build. Everything wired together.',
+    includes: ['React web app', 'API backend', '2 integrations', 'ML baseline model'],
     popular: false,
   },
   {
-    name: 'Creek Street Bundle',
+    name: 'ML Pipeline',
     price: 'Custom',
-    description: 'Shared benchmarks for merchants on the same block. See how you compare — anonymously.',
-    includes: ['Block-wide analytics', 'Shared ship alerts', 'Group SEO boost', 'Quarterly meetup'],
+    description: 'Demand forecasting or staffing model trained on your data, deployed with automated retraining.',
+    includes: ['Data audit', 'Model training', 'API endpoint', 'Quarterly retrain'],
     popular: false,
   },
 ]
 
 const addons = [
   {
-    title: 'Competitor Visibility Report',
-    description: 'See exactly what passengers find when they search your category before they reach your door.',
+    title: 'Additional API Integration',
+    description: 'Add another platform to an existing sync — QuickBooks, HubSpot, Rezdy, or a custom endpoint.',
   },
   {
-    title: 'Weather + Ship Alerts',
-    description: 'Rain plus three ships? Push indoor experiences. Automated promos on slow tender days.',
+    title: 'Real-Time Dashboard',
+    description: 'Custom React dashboard pulling live data from your integrations and ML models.',
   },
   {
-    title: 'Duty-Free & Ship Delivery',
-    description: 'Setup for jewelry, liquor, and gifts that passengers take back onboard.',
+    title: 'Webhook Reliability Layer',
+    description: 'Retry logic, dead-letter queues, and alerting when third-party webhooks fail.',
   },
   {
-    title: 'Hiring Season Dashboard',
-    description: 'Historical ship data to plan staffing — know which days need extra hands.',
+    title: 'Mobile App Shell',
+    description: 'React Native wrapper around your booking flow for a branded iOS/Android experience.',
   },
   {
-    title: 'Shuttle & Hotel Widgets',
-    description: 'White-label "what to do today" widgets for partners who touch every passenger.',
+    title: 'Data Warehouse Setup',
+    description: 'PostgreSQL or BigQuery with scheduled ETL from all your business systems.',
   },
   {
-    title: 'Multi-Language Expansion',
-    description: 'German and British English pages for European cruise lines.',
+    title: 'CI/CD & DevOps',
+    description: 'GitHub Actions pipelines, Docker containers, staging environments, and deployment automation.',
   },
 ]
 
 const retainers = [
-  { name: 'Ship-Day Monitoring', price: '$149/mo', detail: 'Weekly ship prep reports + slow-day promo suggestions' },
-  { name: 'SEO & Google Business', price: '$199/mo', detail: 'Monthly ranking reports, photo updates, review responses' },
-  { name: 'Analytics Pro', price: '$349/mo', detail: 'Full dashboard + quarterly strategy call' },
-  { name: 'Off-Season Email', price: '$99/mo', detail: 'Keep your list warm Oct–Apr until ships return' },
+  { name: 'Dev Support', price: '$199/mo', detail: 'Bug fixes, small features, dependency updates, uptime monitoring' },
+  { name: 'Integration Monitoring', price: '$149/mo', detail: 'Webhook health checks, sync alerts, monthly integration report' },
+  { name: 'ML Model Maintenance', price: '$299/mo', detail: 'Retraining, drift detection, accuracy reports, feature updates' },
+  { name: 'Full Engineering Retainer', price: '$1,200/mo', detail: '20 hours/month of development across web, API, automation, and ML' },
 ]
 
 export default function Services() {
@@ -162,12 +161,11 @@ export default function Services() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6">
-        {/* Core services */}
         <Reveal>
           <SectionHeading
-            label="Core Services"
-            title="Built for the rhythm of cruise season"
-            description="Every service ties back to ship schedules, mobile passengers, and dock-day revenue — not generic agency fluff."
+            label="Development Services"
+            title="Code that connects your business systems"
+            description="We write software — websites, APIs, automations, and ML models. No marketing fluff, no template sites. Real engineering for Ketchikan operators."
           />
         </Reveal>
 
@@ -200,13 +198,12 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Productized packages */}
         <div id="packages" className="mt-28">
           <Reveal>
             <SectionHeading
-              label="Popular Packages"
-              title="Productized for Ketchikan ship days"
-              description="Fixed scope, fixed timeline, clear deliverables. No open-ended agency billing."
+              label="Project Packages"
+              title="Scoped builds with clear deliverables"
+              description="Fixed scope, documented code, GitHub repos you own. No open-ended agency billing."
             />
           </Reveal>
 
@@ -220,7 +217,7 @@ export default function Services() {
                 >
                   {pkg.popular && (
                     <span className="absolute -top-3 right-6 rounded-full bg-glacier-400 px-3 py-0.5 text-xs font-bold text-fjord-950">
-                      Best for first ship day
+                      Most requested
                     </span>
                   )}
                   <div className="flex items-start justify-between gap-4">
@@ -239,7 +236,7 @@ export default function Services() {
                     ))}
                   </ul>
                   <Button href="#contact" variant="outline" className="mt-6 w-full">
-                    Ask about {pkg.name}
+                    Discuss {pkg.name}
                   </Button>
                 </div>
               </Reveal>
@@ -247,13 +244,12 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Add-ons */}
         <div className="mt-28">
           <Reveal>
             <SectionHeading
               label="Add-Ons"
-              title="Bolt-ons for specific ship-day problems"
-              description="Layer these onto any package when you need something extra."
+              title="Extend any project"
+              description="Layer these onto existing builds when you need more capability."
             />
           </Reveal>
 
@@ -269,13 +265,12 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Retainers */}
         <div className="mt-28 pb-24 md:pb-32">
           <Reveal>
             <SectionHeading
-              label="Season Retainers"
-              title="Keep momentum May through September"
-              description="Ongoing support tied to your ship calendar — not generic website maintenance."
+              label="Engineering Retainers"
+              title="Keep your systems running and improving"
+              description="Ongoing development support — not generic website maintenance."
             />
           </Reveal>
 
@@ -300,17 +295,15 @@ export default function Services() {
           <Reveal delay={200}>
             <div className="mt-10 text-center">
               <p className="text-sm text-fjord-700/65">
-                Not sure which services fit? We&apos;ll map a plan to your ships and season on a free audit.
+                Not sure what you need? We&apos;ll map your systems and recommend a build on a free technical consult.
               </p>
               <Button href="#contact" variant="dark" className="mt-5">
-                Book Free Ship-Day Audit
+                Book a Technical Consult
               </Button>
             </div>
           </Reveal>
         </div>
       </div>
-
-      <SectionWave from="white" to="deep" />
     </section>
   )
 }

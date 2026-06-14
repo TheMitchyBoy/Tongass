@@ -4,36 +4,36 @@ import SectionHeading from './ui/SectionHeading'
 
 const faqs = [
   {
-    q: 'How fast can you launch before cruise season?',
-    a: 'Most Harbor and Channel packages go live in 4–6 weeks. We prioritize businesses that need to be ready before the first major ship days in May — book a call by March and we\'ll map a timeline to your opening day.',
+    q: 'What technologies do you work with?',
+    a: 'Python, TypeScript, React, FastAPI, Node.js, PostgreSQL, Docker, AWS, and TensorFlow/scikit-learn for ML. We integrate with Square, Stripe, FareHarbor, HubSpot, QuickBooks, Clover, and custom APIs.',
   },
   {
-    q: 'Do you work with my POS or booking system?',
-    a: 'Yes. We integrate with Square, Stripe, FareHarbor, Rezdy, and most systems Ketchikan tour operators and shops already use. If you\'re on paper and spreadsheets, we\'ll set you up from scratch.',
+    q: 'Do I own the code you write?',
+    a: 'Yes — every project ships in a GitHub repository you own. Full source code, documentation, and deployment configs. No vendor lock-in.',
   },
   {
-    q: 'What if I only make money May through September?',
-    a: 'That\'s exactly who we build for. Our analytics track ship-by-ship revenue so you know which days matter. Off-season retainers are lower, and we help you capture emails for return visitors next season.',
+    q: 'Can you integrate with my existing POS or booking system?',
+    a: 'That\'s our specialty. We build two-way syncs between Square, FareHarbor, Stripe, Clover, Rezdy, and most systems Ketchikan operators already use. If it has an API, we can connect it.',
   },
   {
-    q: 'How do I know this will pay for itself?',
-    a: 'One extra $80 tour booking per ship day covers Harbor in under three weeks. Channel clients average 147% more mobile conversions after launch. We\'ll run the math for your business on a free strategy call — no guesswork.',
+    q: 'What does a machine learning project look like?',
+    a: 'We start with your historical data — transactions, bookings, ship schedules. Train a model for demand forecasting or staffing optimization, deploy it as an API endpoint, and set up automated retraining. Typical ML pipeline: 3–4 weeks.',
   },
   {
-    q: 'Are you actually local to Ketchikan?',
-    a: 'Yes. We\'re on Tongass Ave, we watch ship days in person, and we answer the phone during Alaska business hours. We know Berth 1 from Ward Cove and which streets fill up on Norwegian days.',
+    q: 'How is this different from a marketing agency?',
+    a: 'We write code, not ad copy. Custom websites with real booking logic, API integrations that replace manual data entry, Python automations that run on schedule, and ML models trained on your data. No SEO packages or social media retainers.',
   },
   {
-    q: 'Can passengers book on their phones before they leave the ship?',
-    a: 'That\'s the core of what we build. Mobile-first sites that load on ship Wi-Fi, with pre-booking for tours, tables, and gifts — so you capture revenue during the tender ride to dock.',
+    q: 'Are you local to Ketchikan?',
+    a: 'Yes. We\'re on Tongass Ave. We understand the systems local operators use, the ship schedule constraints, and the seasonal rhythm. We can sit down with your team and map your actual workflows.',
   },
   {
-    q: 'What\'s the Norwegian Day Package?',
-    a: 'It\'s for businesses that already have a site but want to maximize revenue from their biggest ship. We audit which vessel drives the most traffic, build a promo landing page, and give your staff a cheat sheet for that ship\'s peak hours.',
+    q: 'What does ongoing support look like?',
+    a: 'Engineering retainers — bug fixes, feature additions, dependency updates, integration monitoring, and ML model retraining. Priced monthly, scoped to hours. Not generic "website maintenance."',
   },
   {
-    q: 'Do you offer ongoing support after launch?',
-    a: 'Yes. Season retainers include ship-day monitoring, SEO, analytics calls, and off-season email — all priced monthly and tied to your cruise calendar, not generic maintenance.',
+    q: 'How long does a typical project take?',
+    a: 'Integration sprints: 2–3 weeks. Automation builds: 2–3 weeks. Full stack launches: 6–8 weeks. ML pipelines: 3–4 weeks. We scope every project with a clear timeline before starting.',
   },
 ]
 
@@ -46,8 +46,8 @@ export default function FAQ() {
         <Reveal>
           <SectionHeading
             label="FAQ"
-            title="Questions Ketchikan owners ask before season starts"
-            description="Straight answers — no agency jargon."
+            title="Questions about our development services"
+            description="Straight answers about code, integrations, and how we work."
           />
         </Reveal>
 

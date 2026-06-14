@@ -5,33 +5,33 @@ import SectionHeading from './ui/SectionHeading'
 const steps = [
   {
     number: '01',
-    title: 'Discovery Call',
+    title: 'Technical Discovery',
     description:
-      'We visit your shop, watch a ship day in action, and map how passengers currently find you — or don\'t.',
+      'We map your current systems — POS, booking, CRM, spreadsheets — and identify where code can replace manual work.',
   },
   {
     number: '02',
-    title: 'Strategy & Design',
+    title: 'Architecture & Spec',
     description:
-      'Custom wireframes built around your busiest hours, top products, and the ships that matter most.',
+      'API diagrams, data flow maps, and a scoped build plan with clear deliverables, timeline, and repo structure.',
   },
   {
     number: '03',
     title: 'Build & Integrate',
     description:
-      'Website launch with analytics, booking tools, and POS integration. We handle everything.',
+      'Iterative development in a GitHub repo you own. Weekly demos, documented APIs, and test coverage.',
   },
   {
     number: '04',
-    title: 'Launch Before Ships Arrive',
+    title: 'Deploy & Monitor',
     description:
-      'Go live before the season. We train your team and monitor your first ship days together.',
+      'CI/CD pipelines, staging environments, production deployment, and monitoring with alert hooks.',
   },
   {
     number: '05',
-    title: 'Season-Long Optimization',
+    title: 'Iterate & Maintain',
     description:
-      'Weekly reports, A/B testing, and adjustments based on real passenger data.',
+      'Feature additions, model retraining, dependency updates, and ongoing engineering support.',
   },
 ]
 
@@ -43,8 +43,8 @@ export default function Process() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <SectionHeading
-            label="How It Works"
-            title="From first call to first ship day in 4–6 weeks"
+            label="How We Work"
+            title="From discovery to deployed code in 4–8 weeks"
           />
         </Reveal>
 

@@ -15,8 +15,8 @@ export default function Footer() {
               <span className="font-display text-xl font-bold text-white">Tongass Digital</span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/35">
-              2417 Tongass Ave, Ketchikan. Websites and ship-day analytics for cruise-season
-              businesses — locally owned, locally operated.
+              2417 Tongass Ave, Ketchikan. Custom website development, API integrations,
+              workflow automation, and machine learning for local businesses.
             </p>
           </Reveal>
 
@@ -24,9 +24,9 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-white">Services</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/35">
               {[
-                { label: 'Core Services', href: '#services' },
-                { label: 'Packages', href: '#packages' },
-                { label: 'Passenger Analytics', href: '#analytics' },
+                { label: 'Development Services', href: '#services' },
+                { label: 'Code Examples', href: '#code' },
+                { label: 'Automation & ML', href: '#automation' },
                 { label: 'Pricing', href: '#pricing' },
               ].map((item) => (
                 <li key={item.label}>
@@ -40,7 +40,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-white">Company</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/35">
               {[
-                { label: 'Pricing', href: '#pricing' },
+                { label: 'Use Cases', href: '#use-cases' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Contact', href: '#contact' },
               ].map((item) => (
@@ -57,7 +57,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Tongass Digital LLC. Ketchikan, Alaska.
           </p>
           <p className="text-xs text-white/25">
-            Proudly serving businesses from Berth 1 to Ward Cove.
+            Python · React · TypeScript · ML · Integrations
           </p>
         </div>
       </div>

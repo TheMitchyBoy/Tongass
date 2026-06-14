@@ -2,62 +2,62 @@ import { useRef, useState } from 'react'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
 
-const industries = [
+const useCases = [
   {
-    name: 'Gift & Souvenir Shops',
-    description: 'Alaska-made products with ship-friendly checkout and duty-free info.',
-    icon: '🎁',
-    hook: 'Capture impulse buyers before they reach Creek Street.',
-    type: 'Gift & Souvenir Shop',
+    name: 'POS ↔ Booking Sync',
+    description: 'Two-way inventory sync between Square and FareHarbor with webhook reliability.',
+    icon: '🔗',
+    hook: 'Eliminate double-bookings and manual spreadsheet updates.',
+    type: 'Integration',
   },
   {
-    name: 'Salmon & Wildlife Tours',
-    description: 'Pre-booking, real-time availability, and weather updates.',
-    icon: '🐟',
-    hook: 'Fill boats from the tender — not after passengers wander off.',
-    type: 'Tour Operator',
+    name: 'Demand Forecasting',
+    description: 'ML model predicting busy hours by ship, weather, and day-of-week.',
+    icon: '🧠',
+    hook: 'Staff correctly before passengers arrive — not after the rush.',
+    type: 'Machine Learning',
   },
   {
-    name: 'Native Art Galleries',
-    description: 'Authentic stories behind totems, carvings, and textiles.',
-    icon: '🎨',
-    hook: 'Tell the story that turns browsers into buyers.',
-    type: 'Art Gallery',
+    name: 'Custom Booking Widget',
+    description: 'React component with live availability, wired to your POS inventory.',
+    icon: '📱',
+    hook: 'Real-time "3 spots left" badges that actually reflect stock.',
+    type: 'Web Development',
   },
   {
-    name: 'Restaurants & Cafés',
-    description: 'Digital menus, waitlists, and "near the port" SEO.',
-    icon: '🍽️',
-    hook: 'Show up when hungry passengers search "food near cruise port."',
-    type: 'Restaurant / Café',
+    name: 'Alert Automation',
+    description: 'Ship schedule → staffing gap detection → Slack notifications.',
+    icon: '⚙️',
+    hook: 'Know you\'re understaffed before the gangway opens.',
+    type: 'Automation',
   },
   {
-    name: 'Adventure Excursions',
-    description: 'Zipline, kayak, helicopter tours with instant online booking.',
-    icon: '🏔️',
-    hook: 'Waivers signed and seats booked before they hit the dock.',
-    type: 'Adventure Excursion',
+    name: 'CRM Data Pipeline',
+    description: 'ETL from POS, booking, and web forms into HubSpot with custom fields.',
+    icon: '📡',
+    hook: 'One customer record across every touchpoint.',
+    type: 'Data Pipeline',
   },
   {
-    name: 'Jewelry & Gem Stores',
-    description: 'High-res galleries and ship-boarding delivery options.',
-    icon: '💎',
-    hook: 'High-res mobile galleries that load on ship Wi-Fi.',
-    type: 'Jewelry Store',
+    name: 'Kiosk Application',
+    description: 'Touch-screen self-service booking with offline fallback for spotty Wi-Fi.',
+    icon: '🖥️',
+    hook: 'Queue management without hiring another counter person.',
+    type: 'Web Development',
   },
   {
-    name: 'Breweries & Distilleries',
-    description: 'Tasting schedules synced to ship arrivals.',
-    icon: '🍺',
-    hook: 'Sync tasting room hours to ship horns.',
-    type: 'Other',
+    name: 'API Gateway',
+    description: 'Unified REST API routing bookings from web, kiosk, and partner widgets.',
+    icon: '🌐',
+    hook: 'One endpoint, every channel, every system updated.',
+    type: 'API Development',
   },
   {
-    name: 'Transportation & Shuttles',
-    description: 'Route maps from Berth 1–4 and group rate calculators.',
-    icon: '🚌',
-    hook: 'Group rate calculators for 40+ passenger groups.',
-    type: 'Other',
+    name: 'Legacy Migration',
+    description: 'Replace Excel workflows with proper software and automated reports.',
+    icon: '🔧',
+    hook: 'Stop copying numbers between tabs at 5 AM.',
+    type: 'Modernization',
   },
 ]
 
@@ -74,21 +74,21 @@ export default function Industries() {
   }
 
   return (
-    <section id="industries" className="bg-mist-50 py-24 md:py-32 dot-grid">
+    <section id="use-cases" className="bg-mist-50 py-24 md:py-32 dot-grid">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <SectionHeading
-            label="Who We Serve"
-            title="Built for every business cruise ships bring to your door"
-            description="Pick your industry — we'll show you exactly what we'd build for your ship days."
+            label="Use Cases"
+            title="Problems we solve with code"
+            description="Real technical work for Ketchikan operators — integrations, automations, and ML models that replace manual processes."
           />
         </Reveal>
 
         <Reveal delay={150}>
           <div className="mt-10 flex flex-wrap justify-center gap-2">
-            {industries.map((ind, i) => (
+            {useCases.map((uc, i) => (
               <button
-                key={ind.name}
+                key={uc.name}
                 type="button"
                 onClick={() => scrollTo(i)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
@@ -97,34 +97,37 @@ export default function Industries() {
                     : 'bg-white text-fjord-700 ring-1 ring-mist-200 hover:ring-glacier-400/30'
                 }`}
               >
-                {ind.icon} {ind.name.split(' ')[0]}
+                {uc.icon} {uc.name.split(' ')[0]}
               </button>
             ))}
           </div>
         </Reveal>
 
         <div ref={scrollRef} className="industry-scroll mt-10 pb-4">
-          {industries.map((industry, i) => (
+          {useCases.map((useCase, i) => (
             <article
-              key={industry.name}
+              key={useCase.name}
               className={`industry-card section-card flex flex-col rounded-2xl p-6 ${
                 active === i ? 'active ring-2 ring-glacier-400/40' : ''
               }`}
               onClick={() => setActive(i)}
             >
-              <span className="text-4xl" role="img" aria-hidden="true">{industry.icon}</span>
-              <h3 className="mt-5 font-display text-lg font-bold text-fjord-950">{industry.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-fjord-700/65">{industry.description}</p>
-              <p className="mt-3 text-xs font-medium text-glacier-400">{industry.hook}</p>
+              <span className="text-4xl" role="img" aria-hidden="true">{useCase.icon}</span>
+              <span className="mt-4 inline-block w-fit rounded-full bg-glacier-400/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-glacier-400 ring-1 ring-glacier-400/20">
+                {useCase.type}
+              </span>
+              <h3 className="mt-3 font-display text-lg font-bold text-fjord-950">{useCase.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-fjord-700/65">{useCase.description}</p>
+              <p className="mt-3 text-xs font-medium text-glacier-400">{useCase.hook}</p>
               <a
                 href="#contact"
                 className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-fjord-950 transition hover:text-glacier-400"
                 onClick={(e) => {
                   e.stopPropagation()
-                  sessionStorage.setItem('businessType', industry.type)
+                  sessionStorage.setItem('projectType', useCase.type)
                 }}
               >
-                Get a plan for my {industry.name.split(' ')[0].toLowerCase()}
+                Discuss this use case
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

@@ -6,30 +6,30 @@ import SectionWave from './SectionWave'
 const testimonials = [
   {
     quote:
-      'Before Tongass, we had no idea Norwegian Bliss days were worth 2x our slow ships. We staff up accordingly and revenue jumped 40% in one season. Paid for itself in the first two weeks.',
+      'They built a two-way sync between our Square POS and FareHarbor in three weeks. We haven\'t manually updated inventory since. Zero double-bookings all season.',
     name: 'Sarah Lindqvist',
     business: 'Creek Street Trading Co.',
-    location: 'Front St, Berth 2 walkable',
-    type: 'Gift Shop',
-    metric: '+40% revenue',
+    location: 'Front St',
+    type: 'POS Integration',
+    metric: '0 manual syncs',
   },
   {
     quote:
-      'We were losing charters to operators with better mobile sites. Now boats fill from pre-bookings before passengers hit Thomas Basin. Avg. 6 extra seats per ship day.',
+      'The demand forecasting model tells us which days need extra guides before we even see the ship schedule. Staffing accuracy went from guesswork to 91% hit rate.',
     name: 'Mike Tlingit',
     business: 'Rainforest Anglers',
     location: 'Thomas Basin',
-    type: 'Tour Operator',
-    metric: '+6 seats/ship day',
+    type: 'ML Pipeline',
+    metric: '91% forecast accuracy',
   },
   {
     quote:
-      'I can see exactly when Summit passengers browse our gallery — 10:30 AM peak. We shifted hours and added online holds. Gallery traffic up 60% on ship days.',
+      'We had booking data in FareHarbor, sales in Square, and customers in a spreadsheet. Tongass built a pipeline that feeds everything into one dashboard. Saved 8 hours a week.',
     name: 'Elena Vasquez',
     business: 'Totem Heritage Gallery',
     location: 'Creek Street',
-    type: 'Art Gallery',
-    metric: '+60% ship-day traffic',
+    type: 'Data Pipeline',
+    metric: '8 hrs/week saved',
   },
 ]
 
@@ -57,8 +57,8 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-6 pb-24 md:pb-32">
         <Reveal>
           <SectionHeading
-            label="Local Results"
-            title="Ketchikan businesses already winning with Tongass"
+            label="Client Results"
+            title="Code that solved real problems"
           />
         </Reveal>
 
@@ -91,7 +91,7 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <p className="font-semibold text-fjord-950">{t.name}</p>
-                    <p className="text-sm text-fjord-700/55">{t.business} · {t.location}</p>
+                    <p className="text-sm text-fjord-700/55">{t.business} · {t.type}</p>
                   </div>
                 </footer>
               </div>
@@ -126,7 +126,7 @@ export default function Testimonials() {
               }`}
             >
               <p className="text-sm font-semibold text-fjord-950">{item.name}</p>
-              <p className="text-xs text-fjord-700/50">{item.business}</p>
+              <p className="text-xs text-fjord-700/50">{item.type} · {item.business}</p>
             </button>
           ))}
         </div>

@@ -5,54 +5,54 @@ import Button from './ui/Button'
 
 const plans = [
   {
-    name: 'Harbor',
-    price: '$2,400',
-    period: 'one-time + $149/mo',
-    description: 'Essential web presence for shops and small tour operators.',
-    roi: '1 extra $80 sale per ship day pays this off in ~3 weeks.',
+    name: 'Integration',
+    price: '$3,200',
+    period: 'one-time + $149/mo monitoring',
+    description: 'Connect two platforms with two-way sync, error handling, and documentation.',
+    roi: 'Replaces 5–10 hours/week of manual data entry between systems.',
     features: [
-      '5-page mobile-first website',
-      'Google Business setup',
-      'Basic analytics dashboard',
-      'Ship schedule widget',
-      'SSL & hosting included',
-      'Seasonal content updates (2x)',
+      'API audit & mapping',
+      'Two-way data sync',
+      'Webhook reliability layer',
+      'Error monitoring & alerts',
+      'GitHub repo you own',
+      'Integration documentation',
     ],
-    cta: 'Start with Harbor',
+    cta: 'Start Integration',
     highlighted: false,
   },
   {
-    name: 'Channel',
-    price: '$5,800',
-    period: 'one-time + $349/mo',
-    description: 'Full booking and analytics for growing cruise-season businesses.',
-    roi: 'Avg. 147% more mobile conversions after launch. Most clients break even in 2 weeks.',
+    name: 'Full Stack',
+    price: '$8,500',
+    period: 'one-time + $199/mo support',
+    description: 'Custom web app + API backend + integrations + automation pipeline.',
+    roi: 'Complete system replacing spreadsheets, manual syncs, and template websites.',
     features: [
-      'Everything in Harbor',
-      'Online booking & payments',
-      'Tongass Analytics Pro',
-      'Email marketing setup',
-      'Multi-language (up to 3)',
-      'Monthly optimization reports',
-      'Priority ship-day support',
+      'React web application',
+      'API backend (Python/Node)',
+      '2 platform integrations',
+      'Automation pipeline',
+      'CI/CD deployment',
+      'ML baseline model',
+      'Priority engineering support',
     ],
-    cta: 'Go Channel',
+    cta: 'Build Full Stack',
     highlighted: true,
   },
   {
-    name: 'Passage',
+    name: 'Enterprise',
     price: 'Custom',
-    period: 'tailored to your fleet',
-    description: 'Enterprise solution for multi-location operators and franchises.',
-    roi: 'Multi-berth operators typically see 30–50% lift in pre-booked revenue.',
+    period: 'scoped to your systems',
+    description: 'Multi-system architecture for operators with complex integration needs.',
+    roi: 'Multi-location operators typically consolidate 4–6 systems into one pipeline.',
     features: [
-      'Everything in Channel',
-      'Multi-location management',
-      'Custom analytics & API access',
-      'Kiosk & in-store displays',
-      'Dedicated account manager',
-      'Off-season marketing campaigns',
-      'Annual strategy planning',
+      'Everything in Full Stack',
+      'Multi-location data warehouse',
+      'Custom ML model suite',
+      'API gateway for partners',
+      'Dedicated engineer',
+      'SLA & on-call support',
+      'Quarterly architecture review',
     ],
     cta: 'Contact Us',
     highlighted: false,
@@ -66,14 +66,14 @@ export default function Pricing() {
         <Reveal>
           <SectionHeading
             label="Pricing"
-            title="Invest once, earn all season"
-            description="Transparent pricing. No surprise fees. Every plan includes local Ketchikan support and ship-schedule integration."
+            title="Engineering projects with clear scope"
+            description="Fixed-price builds with documented code you own. Retainers for ongoing development — not marketing maintenance."
           />
         </Reveal>
 
         <Reveal delay={80}>
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm font-medium text-fjord-700">
-            <span className="text-glacier-400">Ship Day Starter</span> — Website + analytics + Google Business + ship widget. One package, one price, live in 4–6 weeks.
+            <span className="text-glacier-400">Automation Build</span> — Replace a manual workflow with Python automation. From $2,800, delivered in 2–3 weeks.
           </p>
         </Reveal>
 

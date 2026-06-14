@@ -3,10 +3,10 @@ import { useCountUp } from '../hooks/useCountUp'
 import Reveal from './ui/Reveal'
 
 const stats = [
-  { value: 1.3, suffix: 'M+', decimals: 1, label: 'Cruise passengers through Ketchikan annually' },
-  { value: 5, suffix: ' hrs', prefix: '4–', label: 'Average time passengers spend ashore', skipCount: true },
-  { value: 78, suffix: '%', label: 'Search on mobile before buying locally' },
-  { value: 3, suffix: ' min', label: 'Decision window before they walk past your door' },
+  { value: 12, suffix: '+', label: 'Platforms integrated (Square, FareHarbor, Stripe, HubSpot…)' },
+  { value: 847, suffix: '', label: 'Automated sync jobs run daily across client systems' },
+  { value: 91, suffix: '%', label: 'Average ML model accuracy on demand forecasts' },
+  { value: 100, suffix: '%', label: 'Source code ownership — every repo is yours' },
 ]
 
 export default function Stats() {
@@ -27,11 +27,9 @@ export default function Stats() {
 
 function StatCard({ stat }) {
   const [ref, inView] = useInView()
-  const count = useCountUp(stat.skipCount ? 0 : stat.value, inView && !stat.skipCount)
+  const count = useCountUp(stat.value, inView)
 
-  const display = stat.skipCount
-    ? `${stat.prefix || ''}${stat.value}${stat.suffix}`
-    : `${stat.decimals ? count.toFixed(stat.decimals) : Math.round(count)}${stat.suffix}`
+  const display = `${Math.round(count)}${stat.suffix}`
 
   return (
     <div

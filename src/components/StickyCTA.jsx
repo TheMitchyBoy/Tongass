@@ -36,7 +36,7 @@ export default function StickyCTA() {
           Call
         </a>
         <Button href="#contact" variant="primary" className="flex-[2] !py-3">
-          Free 15-Min Call
+          Start a Project
         </Button>
       </div>
     </div>
