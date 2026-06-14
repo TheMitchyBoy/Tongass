@@ -23,11 +23,18 @@ npm run preview
 - React 19 + Vite 6
 - Tailwind CSS 4
 
-## Sections
+## Analytics & tracking
 
-- Hero with terminal deploy mockup
-- Development services (web apps, integrations, automation, ML)
-- Code examples with real Python, TypeScript, and React snippets
-- Automation & ML platform showcase
-- Technical use cases
-- Process, pricing, testimonials, and contact form
+Copy `.env.example` to `.env` and add your tracking IDs:
+
+```bash
+cp .env.example .env
+```
+
+| Variable | Description |
+|---|---|
+| `VITE_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID (`G-XXXXXXXX`) |
+| `VITE_CLARITY_PROJECT_ID` | Microsoft Clarity project ID (optional) |
+| `VITE_TRACKING_ENDPOINT` | Custom API endpoint for first-party events (optional) |
+
+Tracking includes page views, scroll depth, section visibility, CTA clicks, form submissions, and FAQ interactions. A cookie consent banner is shown before any tracking loads.

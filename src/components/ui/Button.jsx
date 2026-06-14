@@ -5,6 +5,8 @@ export default function Button({
   className = '',
   onClick,
   type = 'button',
+  'data-track': dataTrack,
+  'data-track-location': dataTrackLocation,
 }) {
   const base =
     'btn-shine group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300'
@@ -19,17 +21,21 @@ export default function Button({
   }
 
   const classes = `${base} ${variants[variant]} ${className}`
+  const trackingProps = {
+    ...(dataTrack ? { 'data-track': dataTrack } : {}),
+    ...(dataTrackLocation ? { 'data-track-location': dataTrackLocation } : {}),
+  }
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} {...trackingProps}>
         <span className="relative z-10">{children}</span>
       </a>
     )
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} {...trackingProps}>
       <span className="relative z-10">{children}</span>
     </button>
   )

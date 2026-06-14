@@ -68,7 +68,7 @@ export default function Header() {
             </svg>
             (907) 555-0147
           </a>
-          <Button href="#contact" variant="primary" className="!px-4 !py-2.5 !text-sm lg:!px-5">
+          <Button href="#contact" variant="primary" className="!px-4 !py-2.5 !text-sm lg:!px-5" data-track="start_project" data-track-location="header">
             Start a Project
           </Button>
           <button

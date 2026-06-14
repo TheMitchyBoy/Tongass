@@ -3,6 +3,7 @@ import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
 import Button from './ui/Button'
 import TiltCard from './ui/TiltCard'
+import { trackFormSubmit } from '../lib/tracking'
 
 const projectTypes = [
   'Website / Web App',
@@ -36,6 +37,15 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    const form = e.target
+    const projectTypeValue = form.type?.value || projectType
+    const timelineValue = form.timeline?.value
+
+    trackFormSubmit('contact', {
+      project_type: projectTypeValue,
+      timeline: timelineValue,
+    })
+
     setSubmitted(true)
   }
 

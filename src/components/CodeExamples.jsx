@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
 import SectionWave from './SectionWave'
+import { trackEvent } from '../lib/tracking'
 
 const examples = [
   {
@@ -149,7 +150,10 @@ export default function CodeExamples() {
             <button
               key={ex.id}
               type="button"
-              onClick={() => setActive(i)}
+              onClick={() => {
+                setActive(i)
+                trackEvent('code_example_view', { example_id: ex.id, example_label: ex.label })
+              }}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                 active === i
                   ? 'bg-fjord-950 text-white shadow-lg shadow-fjord-950/20'

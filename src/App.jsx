@@ -14,10 +14,14 @@ import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import VisitorTracking from './components/VisitorTracking'
+import CookieConsent from './components/CookieConsent'
 
 export default function App() {
   return (
     <div className="relative min-h-screen">
+      <VisitorTracking />
+      <CookieConsent />
       <WaterAmbience />
       <ScrollProgress />
       <CursorGlow />

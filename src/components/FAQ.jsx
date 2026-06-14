@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
+import { trackEvent } from '../lib/tracking'
 
 const faqs = [
   {
@@ -58,7 +59,13 @@ export default function FAQ() {
                 <button
                   type="button"
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                  onClick={() => setOpen(open === i ? -1 : i)}
+                  onClick={() => {
+                    const next = open === i ? -1 : i
+                    if (next === i) {
+                      trackEvent('faq_expand', { question: faq.q })
+                    }
+                    setOpen(next)
+                  }}
                   aria-expanded={open === i}
                 >
                   <span className="font-display text-base font-semibold text-fjord-950 md:text-lg">

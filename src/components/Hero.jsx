@@ -57,13 +57,13 @@ export default function Hero() {
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
-                <Button href="#contact" variant="primary">
+                <Button href="#contact" variant="primary" data-track="discuss_project" data-track-location="hero">
                   Discuss Your Project
                   <svg className="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Button>
-                <Button href="#code" variant="secondary">
+                <Button href="#code" variant="secondary" data-track="see_code_examples" data-track-location="hero">
                   See Code Examples
                 </Button>
               </div>
