@@ -62,7 +62,7 @@ export default function Contact() {
               {[
                 { label: 'Office', value: '2417 Tongass Ave, Suite 204', sub: 'Ketchikan, AK 99901', href: null },
                 { label: 'Phone', value: '(907) 555-0147', sub: 'Mon–Fri, 8 AM – 5 PM AKST', href: 'tel:+19075550147' },
-                { label: 'Email', value: 'hello@tongassdigital.com', sub: 'We respond within one business day', href: 'mailto:hello@tongassdigital.com' },
+                { label: 'Email', value: 'hello@ketchikancode.com', sub: 'We respond within one business day', href: 'mailto:hello@ketchikancode.com' },
               ].map((item, i) => (
                 <Reveal key={item.label} delay={i * 80}>
                   <div className="group flex gap-4 rounded-xl p-3 transition hover:bg-white/5">

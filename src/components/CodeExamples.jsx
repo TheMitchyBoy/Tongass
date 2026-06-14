@@ -11,7 +11,7 @@ const examples = [
     title: 'Square ↔ FareHarbor inventory sync',
     description:
       'Keep online availability in sync with in-store inventory across booking platforms — no double-bookings on ship days.',
-    code: `from tongass.integrations import SquareClient, FareHarborClient
+    code: `from ketchikancode.integrations import SquareClient, FareHarborClient
 
 square = SquareClient(env="production")
 fareharbor = FareHarborClient(company_id="ketchikan-tours")
@@ -36,7 +36,7 @@ def sync_availability():
     description:
       'Pull port schedules, cross-reference with bookings, and push Slack alerts when a big ship docks with low staffing coverage.',
     code: `import schedule
-from tongass.automation import PortSchedule, StaffingModel
+from ketchikancode.automation import PortSchedule, StaffingModel
 
 def daily_ship_prep():
     ships = PortSchedule.fetch_ketchikan(days_ahead=3)
@@ -89,7 +89,7 @@ peak = model.predict(tomorrow_features).argmax()  # → 10:30 AM`,
     description:
       'Unified webhook handler that routes bookings from web, kiosk, and partner widgets into one CRM and POS.',
     code: `import { Router } from "express";
-import { syncToSquare, syncToCRM } from "@tongass/integrations";
+import { syncToSquare, syncToCRM } from "@ketchikancode/integrations";
 
 const router = Router();
 

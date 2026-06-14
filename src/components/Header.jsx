@@ -38,7 +38,7 @@ export default function Header() {
           </div>
           <div className="hidden sm:block">
             <span className="font-display text-lg font-bold tracking-tight text-white">
-              Tongass Digital
+              Ketchikan Code
             </span>
             <span className="block text-[10px] font-medium uppercase tracking-[0.25em] text-glacier-400/70">
               Coding Services · Ketchikan

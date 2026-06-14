@@ -5,12 +5,12 @@ import SectionWave from './SectionWave'
 import TiltCard from './ui/TiltCard'
 
 const terminalLines = [
-  { type: 'cmd', text: '$ tongass deploy --project creek-street-sync' },
+  { type: 'cmd', text: '$ ketchikancode deploy --project creek-street-sync' },
   { type: 'out', text: '✓ Square inventory connected' },
   { type: 'out', text: '✓ FareHarbor webhooks registered' },
   { type: 'out', text: '✓ ML demand model trained (R² 0.91)' },
   { type: 'out', text: '✓ React booking widget deployed' },
-  { type: 'success', text: '→ Live at https://api.tongassdigital.com' },
+  { type: 'success', text: '→ Live at https://api.ketchikancode.com' },
 ]
 
 export default function Hero() {
@@ -87,7 +87,7 @@ export default function Hero() {
                     <span className="h-2.5 w-2.5 rounded-full bg-salmon-400/80" />
                     <span className="h-2.5 w-2.5 rounded-full bg-aurora/80" />
                     <span className="h-2.5 w-2.5 rounded-full bg-glacier-400/80" />
-                    <span className="ml-2 text-[10px] font-mono text-white/35">terminal — tongass-cli</span>
+                    <span className="ml-2 text-[10px] font-mono text-white/35">terminal — ketchikancode-cli</span>
                   </div>
                   <div className="space-y-1.5 p-5 font-mono text-sm">
                     {terminalLines.slice(0, visibleLines).map((line, i) => (

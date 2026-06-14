@@ -12,7 +12,7 @@ export default function Footer() {
                   <path d="M12 3L2 20h20L12 3zm0 5.5L17.5 18h-11L12 8.5z" />
                 </svg>
               </div>
-              <span className="font-display text-xl font-bold text-white">Tongass Digital</span>
+              <span className="font-display text-xl font-bold text-white">Ketchikan Code</span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/35">
               2417 Tongass Ave, Ketchikan. Custom website development, API integrations,
@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
           <p className="text-xs text-white/25">
-            &copy; {new Date().getFullYear()} Tongass Digital LLC. Ketchikan, Alaska.
+            &copy; {new Date().getFullYear()} Ketchikan Code. Ketchikan, Alaska.
           </p>
           <p className="text-xs text-white/25">
             Python · React · TypeScript · ML · Integrations

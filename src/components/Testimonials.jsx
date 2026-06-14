@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      'We had booking data in FareHarbor, sales in Square, and customers in a spreadsheet. Tongass built a pipeline that feeds everything into one dashboard. Saved 8 hours a week.',
+      'We had booking data in FareHarbor, sales in Square, and customers in a spreadsheet. Ketchikan Code built a pipeline that feeds everything into one dashboard. Saved 8 hours a week.',
     name: 'Elena Vasquez',
     business: 'Totem Heritage Gallery',
     location: 'Creek Street',

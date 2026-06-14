@@ -1,6 +1,6 @@
-# Tongass Digital
+# Ketchikan Code
 
-Marketing website for **Tongass Digital** — a Ketchikan, Alaska company selling websites and passenger analytics technology to businesses that serve cruise ship passengers.
+Website for **Ketchikan Code** — a Ketchikan, Alaska development shop offering custom website coding, API integrations, workflow automation, and machine learning for local businesses.
 
 ## Quick Start
 
@@ -25,8 +25,9 @@ npm run preview
 
 ## Sections
 
-- Hero with live ship traffic mockup
-- Services (websites, analytics, e-commerce, SEO, email, kiosks)
-- Tongass Analytics platform showcase
-- Industry verticals (gift shops, tours, galleries, restaurants, etc.)
+- Hero with terminal deploy mockup
+- Development services (web apps, integrations, automation, ML)
+- Code examples with real Python, TypeScript, and React snippets
+- Automation & ML platform showcase
+- Technical use cases
 - Process, pricing, testimonials, and contact form
